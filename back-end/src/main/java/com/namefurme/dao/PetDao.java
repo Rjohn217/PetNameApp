@@ -1,14 +1,18 @@
 package com.namefurme.dao;
 
 import com.namefurme.model.Pet;
+
+import java.sql.SQLException;
 import java.util.List;
 
 public interface PetDao {
 
-    List<Pet> findAll();
-    Pet findById(Long id);
-    void save(Pet pet);
-    void delete(Pet pet);
-    void update(Pet pet);
+    List<Pet> findAll() throws SQLException;
+    Pet findById(Long id) throws SQLException;
+    Pet create(Pet pet) throws SQLException;
+    boolean delete(Pet pet) throws SQLException;
+    boolean deleteById(Long id) throws SQLException;
+    Pet updatePet(Pet pet) throws SQLException;
+    Pet findByBreed(String breed) throws SQLException;
     
 }
