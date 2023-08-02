@@ -1,8 +1,16 @@
+import io.micrometer.common.lang.NonNull;
+
 public class user {
+
+    @NonNull
     public String name;
+    @NonNull
     private String username;
+    @NonNull
     private String password;
+    @NonNull
     private String email;
+    @NonNull
     private String phone;
 
     public String getName() {
@@ -40,6 +48,16 @@ public class user {
     public String getPhone() { return phone; }
 
     public void setPhone(String phone) { this.phone = phone; }
+
+    public String toString() {
+        return "user{" +
+                "name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email=" + email +
+                ", phone=" + phone +
+                '}';
+    }
 
 
 

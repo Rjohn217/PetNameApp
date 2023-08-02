@@ -1,5 +1,7 @@
+import io.micrometer.common.lang.NonNull;
+
 public class pets {
-    
+    @NonNull
     public String breed;
 
     public String getBreed() {
@@ -10,4 +12,9 @@ public class pets {
         this.breed = breed;
     }
 
+    public String toString() {
+        return "pets{" +
+                "breed='" + breed + '\'' +
+                '}';
+    }
 }
