@@ -1,64 +1,71 @@
-import io.micrometer.common.lang.NonNull;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import java.util.Set;
 
-public class user {
+@Entity
+public class User {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Column(nullable = false)
+    private String name;
 
-    @NonNull
-    public String name;
-    @NonNull
+    @Column(nullable = false, unique = true)
     private String username;
-    @NonNull
+
+    @Column(nullable = false)
     private String password;
-    @NonNull
+
+    @Column(nullable = false, unique = true)
     private String email;
-    @NonNull
+
+    @Column (nullable = false, unique = true)
     private String phone;
 
-    public String getName() {
-        return name;
-    }
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
+    private Set<Pet> pets;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public Long getId() { return id; }
 
-    public String getUsername() {
-        return username;
-    }
+    public void setId(Long id) { this.id = id; }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    public String getName() { return name; }
 
-    public String getPassword() {
-        return password;
-    }
+    public void setName(String name) { this.name = name; }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public Set<Pet> getPets() { return pets; }
 
-    public String getEmail() {
-        return email;
-    }
+    public void setPets(Set<Pet> pets) { this.pets = pets; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public String getUsername() { return username; }
+
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 
     public String getPhone() { return phone; }
 
     public void setPhone(String phone) { this.phone = phone; }
 
     public String toString() {
-        return "user{" +
-                "name='" + name + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email=" + email +
-                ", phone=" + phone +
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pets=" + pets +
                 '}';
     }
-
-
-
 }
