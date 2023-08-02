@@ -9,7 +9,6 @@ import jakarta.persistence.Table;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.FetchType;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "votes")
@@ -28,13 +27,6 @@ public class Vote {
     @JoinColumn(name = "pet_id", nullable = false)
     private Pet pet;
 
-    @Column(name = "timestamp")
-    private LocalDateTime timestamp;
-
-    @Column(name = "value")
-    private int value;
-
-    // Getters, setters, and other methods...
     
     public Long getId() {
         return id;
@@ -60,30 +52,12 @@ public class Vote {
         this.pet = pet;
     }
 
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(LocalDateTime timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
     @Override
     public String toString() {
         return "Vote{" +
                 "id=" + id +
                 ", user=" + user +
                 ", pet=" + pet +
-                ", timestamp=" + timestamp +
-                ", value=" + value +
                 '}';
     }
 }
