@@ -22,6 +22,13 @@ public class Pet {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+
+    public Pet(Long id, String breed, User user) {
+        this.id = id;
+        this.breed = breed;
+        this.user = user;
+    }
+
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }

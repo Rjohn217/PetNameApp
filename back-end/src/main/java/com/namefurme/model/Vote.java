@@ -27,7 +27,12 @@ public class Vote {
     @JoinColumn(name = "pet_id", nullable = false)
     private Pet pet;
 
-    
+    public Vote(Long id, User user, Pet pet) {
+        this.id = id;
+        this.user = user;
+        this.pet = pet;
+    }
+
     public Long getId() {
         return id;
     }

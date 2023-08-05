@@ -34,6 +34,16 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private Set<Pet> pets;
 
+    public User(Long id, String name, String username, String password, String email, String phone, Set<Pet> pets) {
+        this.id = id;
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+        this.pets = pets;
+    }
+
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
