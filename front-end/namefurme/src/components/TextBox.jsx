@@ -3,8 +3,9 @@ import React from 'react';
 const TextBox = () => {
   return (
     <div>
-      <h3>Text Box</h3>
-      {/* Add the text box for name submission here */}
+      <textarea name="Name This Pet" id="" cols="30" rows="3"></textarea>
+      <br/>
+      <button>Submit</button>
     </div>
   );
 };
