@@ -1,10 +1,17 @@
 import React from 'react';
 
 const LoginSignUp = () => {
+  const loginSignUpStyle = {
+    textAlign: 'center',
+    marginTop: '20px',
+    padding: '10px',
+  };
+
   return (
-    <div>
-      <h3>Login/Sign Up</h3>
-      {/* Add login and sign-up forms here */}
+    <div style={loginSignUpStyle}>
+      <p>
+        <a href="#">Log In</a> or <a href="#">Sign Up</a> to get your own name suggestions!
+      </p>
     </div>
   );
 };
