@@ -5,6 +5,10 @@ const buttonStyle = {
   marginTop: '10px',
 };
 
+const textBoxStyle = {
+  resize: 'none',
+};
+
 const TextBox = () => {
   return (
     <div className="bg-secondary p-3 rounded">
@@ -13,7 +17,8 @@ const TextBox = () => {
       name="Name This Pet" 
       cols="32" 
       rows="3"
-      placeholder= "What is a good name for this pet?">
+      placeholder= "What is a good name for this pet?"
+      style= {textBoxStyle}>
       </textarea>
       <br />
       <button className="btn btn-info" style={buttonStyle}>Submit</button>
