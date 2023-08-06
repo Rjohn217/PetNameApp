@@ -3,7 +3,8 @@ import React from 'react';
 const LoginSignUp = () => {
   const loginSignUpStyle = {
     textAlign: 'center',
-    marginTop: '20px',
+    marginTop: '40px',
+    marginBottom: '40px',
     padding: '10px',
   };
 
