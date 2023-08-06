@@ -11,7 +11,7 @@ const LoginSignUp = () => {
   return (
     <div style={loginSignUpStyle}>
       <p>
-        <a href="#">Log In</a> or <a href="#">Sign Up</a> to get your own name suggestions!
+        <a href="#">Log In</a> or <a href="#">Sign Up</a> to name your babies!
       </p>
     </div>
   );

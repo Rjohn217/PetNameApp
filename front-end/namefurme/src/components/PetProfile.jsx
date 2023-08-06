@@ -18,7 +18,7 @@ const PetProfile = () => {
     height: '400px',
     objectFit: 'cover',
     borderRadius: '5%',
-    border : '4px solid #00BEEF',
+    border : '2px solid #00BEEF',
   };
 
   const descriptionStyle = {
