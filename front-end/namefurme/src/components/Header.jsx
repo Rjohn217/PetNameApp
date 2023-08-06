@@ -1,15 +1,17 @@
 import React from 'react';
 import pawprint from '../assets/pawprint.png';
+import LoginSignUp from './LoginSignUp';
 
 const Header = () => {
   const headerStyle = {
+    marginBottom: '20px',
     fontFamily: "'Farsan', cursive",
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'fixed',
     top: 0,
-    left: 0, // Add this to position the header at the left of the viewport
+    left: 0,
     width: '100%',
     background: 'whitesmoke',
     color: '#00BEEF',
@@ -25,14 +27,11 @@ const Header = () => {
   };
 
   return (
-    <header style={headerStyle}>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+    <header>
+      <div style={headerStyle}>
         <h1 style={{ margin: 0 }}>NameFurMe</h1>
         <img src={pawprint} alt="dog paw" style={imageStyle} />
       </div>
-      <nav>
-        {/* Add navigation links here */}
-      </nav>
     </header>
   );
 };
