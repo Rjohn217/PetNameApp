@@ -1,10 +1,9 @@
 import React from 'react';
 import pawprint from '../assets/pawprint.png';
-import LoginSignUp from './LoginSignUp';
 
 const Header = () => {
   const headerStyle = {
-    marginBottom: '20px',
+    marginBottom: '0px',
     fontFamily: "'Farsan', cursive",
     display: 'flex',
     alignItems: 'center',
