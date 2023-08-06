@@ -3,6 +3,7 @@ import Header from './Header';
 import LoginSignUp from './LoginSignUp';
 import PetProfile from './PetProfile';
 import TextBox from './TextBox';
+import Footer from './Footer';
 
 const Homepage = () => {
   return (
@@ -13,9 +14,7 @@ const Homepage = () => {
         <PetProfile />
         <TextBox />
       </main>
-      <footer>
-        <p>&copy; 2023 NameFurMe. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
