@@ -16,7 +16,7 @@ const TextBox = () => {
       name="Name This Pet" 
       cols="32" 
       rows="1"
-      placeholder= "What is a good name for this pet?"
+      placeholder= "What is a good name for this baby?"
       style= {textBoxStyle}>
       </textarea>
       <br />
