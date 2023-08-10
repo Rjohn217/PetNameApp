@@ -30,7 +30,7 @@ const PetProfile = () => {
     <div style={profileStyle}>
       <img src={dancingKitty} alt="Dancing Kitty" style={imageStyle} />
       <div style={descriptionStyle}>
-        <p>Baby boy black kitten, loves to dance</p>
+        <p>Baby boy black kitten, loves to dancey dance</p>
       </div>
     </div>
   );
